@@ -17,23 +17,40 @@ export default function MemberAttendance() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
         <div className="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/5">
-          <p className="text-[10px] text-on-surface-variant font-bold uppercase tracking-[0.2em] mb-1">Weekly Streak</p>
-          <p className="text-4xl font-bold display-font tracking-tighter">14 <span className="text-sm text-on-surface-variant font-medium uppercase tracking-widest">Days</span></p>
+          <p className="text-[10px] text-on-surface-variant font-bold uppercase tracking-[0.2em] mb-1">
+            Weekly Streak
+          </p>
+          <p className="text-4xl font-bold display-font tracking-tighter">
+            14{" "}
+            <span className="text-sm text-on-surface-variant font-medium uppercase tracking-widest">
+              Days
+            </span>
+          </p>
         </div>
         <div className="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/5">
-          <p className="text-[10px] text-on-surface-variant font-bold uppercase tracking-[0.2em] mb-1">Monthly Ratio</p>
-          <p className="text-4xl font-bold display-font tracking-tighter">92%</p>
+          <p className="text-[10px] text-on-surface-variant font-bold uppercase tracking-[0.2em] mb-1">
+            Monthly Ratio
+          </p>
+          <p className="text-4xl font-bold display-font tracking-tighter">
+            92%
+          </p>
         </div>
         <div className="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/5">
-          <p className="text-[10px] text-on-surface-variant font-bold uppercase tracking-[0.2em] mb-1">Total Cal. Burned</p>
-          <p className="text-4xl font-bold display-font tracking-tighter">12.4k</p>
+          <p className="text-[10px] text-on-surface-variant font-bold uppercase tracking-[0.2em] mb-1">
+            Total Cal. Burned
+          </p>
+          <p className="text-4xl font-bold display-font tracking-tighter">
+            12.4k
+          </p>
         </div>
       </div>
 
       <div className="bg-surface-container-low rounded-2xl border border-outline-variant/5 overflow-hidden">
         <div className="p-6 border-b border-outline-variant/10 bg-surface-container-high/20 flex justify-between items-center">
           <h4 className="text-xl font-bold display-font">Session History</h4>
-          <button className="text-[10px] font-bold uppercase tracking-widest text-primary">Download Report</button>
+          <button className="text-[10px] font-bold uppercase tracking-widest text-primary">
+            Download Report
+          </button>
         </div>
         <table className="w-full text-left border-collapse">
           <thead>
@@ -47,7 +64,10 @@ export default function MemberAttendance() {
           </thead>
           <tbody className="divide-y divide-outline-variant/5">
             {attendanceHistory.map((log, i) => (
-              <tr key={i} className="hover:bg-surface-container-high transition-colors">
+              <tr
+                key={i}
+                className="hover:bg-surface-container-high transition-colors"
+              >
                 <td className="px-6 py-4">
                   <p className="text-sm font-bold">{log.date}</p>
                 </td>
@@ -56,13 +76,21 @@ export default function MemberAttendance() {
                 </td>
                 <td className="px-6 py-4">
                   <p className="text-sm">{log.time}</p>
-                  <p className="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">{log.duration}</p>
+                  <p className="text-[10px] text-on-surface-variant uppercase font-bold tracking-widest">
+                    {log.duration}
+                  </p>
                 </td>
-                <td className="px-6 py-4 text-sm font-mono">{log.calories} kcal</td>
+                <td className="px-6 py-4 text-sm font-mono">
+                  {log.calories} kcal
+                </td>
                 <td className="px-6 py-4 text-right">
-                  <span className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tighter ${
-                    log.status === 'Attended' ? 'bg-secondary/10 text-secondary' : 'bg-error/10 text-error'
-                  }`}>
+                  <span
+                    className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tighter ${
+                      log.status === "Attended"
+                        ? "bg-secondary/10 text-secondary"
+                        : "bg-error/10 text-error"
+                    }`}
+                  >
                     {log.status}
                   </span>
                 </td>

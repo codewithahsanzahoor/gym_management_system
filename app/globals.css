@@ -6,45 +6,45 @@
   --font-display: "Space Grotesk", var(--font-space-grotesk), sans-serif;
   --font-headline: "Space Grotesk", var(--font-space-grotesk), sans-serif;
 
-  /* EliteFit Theme Tokens (Obsidian Kinetic - DARK) */
-  --color-background: #0b1326;
-  --color-on-background: #dae2fd;
+  /* EliteFit Theme Tokens (Luminous Monolith - LIGHT) */
+  --color-background: #faf8ff;
+  --color-on-background: #131b2e;
   
-  --color-surface: #0b1326;
-  --color-on-surface: #dae2fd;
-  --color-surface-dim: #0b1326;
-  --color-surface-bright: #31394d;
+  --color-surface: #faf8ff;
+  --color-on-surface: #131b2e;
+  --color-surface-dim: #d2d9f4;
+  --color-surface-bright: #faf8ff;
   
-  --color-surface-container-lowest: #060e20;
-  --color-surface-container-low: #131b2e;
-  --color-surface-container: #171f33;
-  --color-surface-container-high: #222a3d;
-  --color-surface-container-highest: #2d3449;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f3ff;
+  --color-surface-container: #eaedff;
+  --color-surface-container-high: #e2e7ff;
+  --color-surface-container-highest: #dae2fd;
 
-  --color-primary: #adc6ff;
-  --color-on-primary: #002e6a;
-  --color-primary-container: #4d8eff;
-  --color-on-primary-container: #00285d;
+  --color-primary: #0058be;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #2170e4;
+  --color-on-primary-container: #fefcff;
   
-  --color-secondary: #4ae176;
-  --color-on-secondary: #003915;
-  --color-secondary-container: #00b954;
+  --color-secondary: #006e2f;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #6bff8f;
   --color-on-secondary-container: #004119;
   
-  --color-tertiary: #a4c9ff;
-  --color-on-tertiary: #00315d;
-  --color-tertiary-container: #4c93e7;
-  --color-on-tertiary-container: #002a51;
+  --color-tertiary: #005da8;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #2676c8;
+  --color-on-tertiary-container: #fdfcff;
 
-  --color-error: #ffb4ab;
-  --color-on-error: #690005;
-  --color-error-container: #93000a;
-  --color-on-error-container: #ffdad6;
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
 
-  --color-outline: #8c909f;
-  --color-outline-variant: #424754;
+  --color-outline: #727785;
+  --color-outline-variant: #c2c6d6;
   
-  --color-surface-tint: #adc6ff;
+  --color-surface-tint: #005ac2;
   
   /* Utilities */
   --radius-xs: 0.125rem;
@@ -73,7 +73,7 @@
 
 @layer components {
   .glass-panel {
-    @apply bg-surface-container/70 backdrop-blur-xl border border-outline-variant/10;
+    @apply bg-white/70 backdrop-blur-xl border border-outline-variant/20;
   }
 
   .custom-scrollbar {
@@ -90,14 +90,18 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-outline-variant rounded-full;
+    @apply bg-outline-variant/40 rounded-full;
   }
 
   .kinetic-glow-primary {
-    box-shadow: 0 0 12px rgba(173, 198, 255, 0.3);
+    box-shadow: 0 0 15px rgba(0, 88, 190, 0.2);
   }
 
   .kinetic-glow-secondary {
-    box-shadow: 0 0 12px rgba(74, 225, 118, 0.3);
+    box-shadow: 0 0 15px rgba(0, 110, 47, 0.2);
+  }
+  
+  .kinetic-glow-error {
+    box-shadow: 0 0 15px rgba(186, 26, 26, 0.2);
   }
 }

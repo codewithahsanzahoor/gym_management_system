@@ -13,13 +13,13 @@ export default function Sidebar({ role }: SidebarProps) {
   const links = globalData.navigationLinks[role];
 
   return (
-    <aside className="h-screen w-64 fixed left-0 top-0 bg-slate-900/80 backdrop-blur-xl flex flex-col py-6 shadow-2xl shadow-blue-500/10 z-50 border-r border-outline-variant/10">
+    <aside className="h-screen w-64 fixed left-0 top-0 bg-surface-container-low/80 backdrop-blur-xl flex flex-col py-6 shadow-2xl shadow-primary/5 z-50 border-r border-outline-variant/10">
       <div className="px-6 mb-10 flex items-center gap-3">
         <div className="w-10 h-10 bg-primary-container rounded flex items-center justify-center">
           <span className="material-symbols-outlined text-on-primary-container">bolt</span>
         </div>
         <div>
-          <h1 className="text-2xl font-bold tracking-tighter text-slate-50">EliteFit</h1>
+          <h1 className="text-2xl font-bold tracking-tighter text-on-surface">EliteFit</h1>
           <p className="text-[10px] text-primary tracking-widest uppercase font-medium">Kinetic Management</p>
         </div>
       </div>
@@ -33,8 +33,8 @@ export default function Sidebar({ role }: SidebarProps) {
               href={link.path}
               className={`flex items-center gap-3 px-4 py-3 transition-all rounded-lg group ${
                 isActive
-                  ? "text-primary font-bold border-r-4 border-primary bg-primary/10"
-                  : "text-slate-400 hover:text-slate-100 hover:bg-slate-800/40"
+                  ? "text-primary font-bold border-r-4 border-primary bg-primary/5"
+                  : "text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/40"
               }`}
             >
               <span className={`material-symbols-outlined ${isActive ? "text-primary" : "group-hover:text-primary transition-colors"}`}>

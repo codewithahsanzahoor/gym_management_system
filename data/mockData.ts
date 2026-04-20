@@ -42,6 +42,100 @@ export const adminData = {
   ],
 };
 
+export const adminAnalytics = {
+  annualRevenue: {
+    value: '$1.24M',
+    growth: '+24.8%',
+  },
+  retentionData: [
+    { month: 'Jan', retention: 85, churn: 15 },
+    { month: 'Mar', retention: 88, churn: 12 },
+    { month: 'May', retention: 92, churn: 8 },
+    { month: 'Jul', retention: 90, churn: 10 },
+    { month: 'Sep', retention: 94, churn: 6 },
+    { month: 'Nov', retention: 95, churn: 5 },
+  ],
+  peakHours: {
+    morning: { label: '6-9 AM', percentage: 88 },
+    evening: { label: '5-8 PM', percentage: 94 },
+    midday: { percentage: 45 },
+  },
+  equipmentUtilization: [
+    { name: 'Cardio Deck', value: 82, color: 'primary' },
+    { name: 'Weight Zone', value: 95, color: 'secondary' },
+    { name: 'HIIT Studio', value: 64, color: 'tertiary' },
+  ],
+  membershipPerformance: [
+    { name: 'Kinetic VIP', members: 1240, contribution: 42, trend: '+12.4%', color: 'primary' },
+    { name: 'Elite Pro', members: 3890, contribution: 35, trend: '+5.8%', color: 'secondary' },
+    { name: 'Standard', members: 8120, contribution: 23, trend: '-1.2%', color: 'tertiary' },
+  ]
+};
+
+export const adminInventory = {
+  globalStockValue: {
+    value: '$142,850',
+    trend: '+12.4%',
+  },
+  categories: ['Supplements', 'Equipment', 'Apparel', 'Tech'],
+  items: [
+    { 
+      id: 'SUPP-042', 
+      name: 'Elite Whey Isolate', 
+      stock: 84, 
+      maxStock: 100, 
+      velocity: 'High', 
+      status: 'Optimal', 
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDB66ibGVwb5c5dRrXPsnFHw0KGODqhLUQjS28EBk4ZSWQN28JsnEf8QJ7t2ayQWVzcbhLRyESoKU-zusVU_3Cn_TtXWCbokX58omtndTzgk-ztMT_UwVWKsffnlGCKewJlx-vTR5ZWtGnvPo33Wf5fyrFqUe-6VESifyILcf8LPC2P4wdfzXJlWzUu0uShCDUhyalX1GxPvWb6okrmVVCniqhO4Na_z5q1vvt7qGGvIj6rOLgJUlqDO4ljXPl_iEopEfWh_r3oZ2Y' 
+    },
+    { 
+      id: 'GEAR-901', 
+      name: 'Kinetic Grip Gloves', 
+      stock: 12, 
+      maxStock: 150, 
+      eta: '48 Hours', 
+      status: 'Critical', 
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBG218NV4URMjkCkIdmKHdZaSQx1ur36-RKVT2gMWPhNtzBQt059oom_NVESsniC7JX2sPwBgoUW5DMkrwEk7WQrQdMCaQLoFOFS11MQcZnCy218GHgAkN-obCR6CtLMqH4ThnaoGX7rGeMSkQUjMjE96UycPfyPhQt9QfJG8WM7pSvcMoizQXNs4Ci79YbqgTy9OoEY42UFSfBqixVRGP3PEiLycPsZxqdHa8L3NkpzVpxjfCseMWGAzh0VvkZIHYJVsu2-Cvrd4I' 
+    },
+    { 
+      id: 'TECH-002', 
+      name: 'Heart Rate Monitor V2', 
+      stock: 45, 
+      maxStock: 60, 
+      batch: 'Active', 
+      status: 'Tech Asset', 
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC8IbYnn7Cu5BNu5GoneoPrPM_TRzkPHi--dbDT9DRzqLD9PdZW0n7YJbAuCG9BWNUEGXBWT4WLqcw4bkEUgdWL87PB1QtCyPjUw8PhBq1GA9qnt7qG3y9RD9Hwtas-sVEmddFsUVlyOtramkpnu3SnvuXZ6kyKA2bciStcM4hCsnBPCbcqEtgkVJJyXeUPFbu_IjQooJCd0nNbzgtMEe3NSbnCVdBV5kW32hmX0ku9-50Qg6EJre-4hF-ONfVWCYdzcahjzsj9zjc' 
+    },
+  ],
+  logistics: [
+    { id: '#L-98422', vendor: 'Global Supplements Co.', amount: '$12,400.00', status: 'In Transit' },
+    { id: '#L-98419', vendor: 'Titan Equipment Ltd.', amount: '$4,120.00', status: 'Processing' },
+  ]
+};
+
+export const adminSettings = {
+  facility: {
+    timezone: 'UTC -05:00 (Eastern Standard Time)',
+    openingHours: '05:00',
+    closingHours: '23:00',
+    capacityThreshold: 250,
+  },
+  integrations: [
+    { name: 'Stripe', type: 'Payments & Billing', status: true, icon: 'credit_card' },
+    { name: 'Postmark', type: 'Transactional Email', status: true, icon: 'mail' },
+    { name: 'IoT Access', type: 'Door Control Units', status: true, icon: 'sensor_door' },
+  ],
+  api: {
+    key: '••••••••••••••••••••••••ef3a',
+    webhook: 'https://api.elitefit.io/v2/hooks/system_event',
+    lastRotated: '2d ago',
+  },
+  lockers: {
+    online: 98,
+    offline: 2,
+  }
+};
+
 export const trainerData = {
   stats: {
     activeRosters: 42,
