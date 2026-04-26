@@ -19,4 +19,14 @@ export const getMembershipPlans = async () => {
     }
 };
 
+export const getDashboardStats = async () => {
+    try {
+        const response = await api.get('/dashboard-stats/');
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching stats:', error);
+        throw error;
+    }
+};
+
 export default api;
