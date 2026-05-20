@@ -63,4 +63,24 @@ export const createMember = async (memberData: any) => {
     return response.data;
 };
 
+export const getAttendance = async () => {
+    try {
+        const response = await api.get('/attendance/');
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching attendance:', error);
+        throw error;
+    }
+};
+
+export const markAttendance = async (attendanceData: { user: number; status?: string }) => {
+    try {
+        const response = await api.post('/attendance/', attendanceData);
+        return response.data;
+    } catch (error) {
+        console.error('Error marking attendance:', error);
+        throw error;
+    }
+};
+
 export default api;
